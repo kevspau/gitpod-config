@@ -1,1 +1,6 @@
-
+tasks:
+  - init: |
+      curl https://nim-lang.org/choosenim/init.sh -sSf | sh
+      export PATH=/home/gitpod/.nimble/bin:$PATH
+    command: |
+    
