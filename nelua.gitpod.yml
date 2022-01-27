@@ -1,0 +1,8 @@
+tasks:
+  - init: |
+      sudo apt-get install build-essential git gcc gdb
+      git clone https://github.com/edubart/nelua-lang.git && cd nelua-lang
+    command: |
+      make
+      cd ..
+      export PATH=$PATH:nelua-lang
