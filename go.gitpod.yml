@@ -1,1 +1,10 @@
-
+tasks:
+  - init: |
+      curl -L https://go.dev/dl/go1.18.linux-amd64.tar.gz -o go.tar.gz
+      tar -xf go.tar.gz
+    command: |
+      export PATH=$PATH:/workspace/solid-fortnight/go/bin
+      touch .gitignore
+      echo '*.exe' >> .gitignore
+      echo '*.o' >> .gitignore
+      touch main.go
