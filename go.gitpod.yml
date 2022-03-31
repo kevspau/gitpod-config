@@ -4,7 +4,8 @@ tasks:
       tar -xf go.tar.gz
       rm go.tar.gz
     command: |
-      export PATH=$PATH:/workspace/solid-fortnight/go/bin
+      export PATH=$PATH:go/bin
+      echo 'export PATH=$PATH:go/bin' >> ~/.bashrc
       touch .gitignore
-      echo '*.exe' >> .gitignore
-      echo '*.o' >> .gitignore
+      echo '/go' >> .gitignore
+      touch main.go
